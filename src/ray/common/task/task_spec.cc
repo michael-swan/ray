@@ -222,6 +222,8 @@ size_t TaskSpecification::NumArgs() const { return message_->args_size(); }
 
 size_t TaskSpecification::NumReturns() const { return message_->num_returns(); }
 
+size_t TaskSpecification::Priority() const { return message_->priority(); }
+
 ObjectID TaskSpecification::ReturnId(size_t return_index) const {
   return ObjectID::FromIndex(TaskId(), return_index + 1);
 }

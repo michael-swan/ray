@@ -148,6 +148,7 @@ void ClusterTaskManager::ScheduleAndDispatchTasks() {
       // there are not enough available resources blocks other
       // tasks from being scheduled.
       const std::shared_ptr<internal::Work> &work = *work_it;
+      // work->task.GetTaskSpecification().Priority()
       RayTask task = work->task;
       RAY_LOG(DEBUG) << "Scheduling pending task "
                      << task.GetTaskSpecification().TaskId();

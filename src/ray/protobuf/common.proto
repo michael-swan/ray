@@ -529,6 +529,8 @@ message TaskSpec {
   // this field contains the detached actor id.
   // Otherwise it's empty and is originated from a driver.
   bytes root_detached_actor_id = 40;
+  // Priority used to sort tasks immediately prior to scheduling.
+  uint64 priority = 41;
 }
 
 message TaskInfoEntry {
